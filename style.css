@@ -146,3 +146,30 @@ body input[type="checkbox"] {
     transform: translateX(0);
 }
 
+
+.animation-zagruski {
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    width: 60px;
+    height: 15px;
+    background-color: black;
+}
+
+@keyframes zagruzka {
+  0% {
+    transform: scale(0.3);
+  }
+  25% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.4);
+  }
+  100% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.8);
+  }
+}
