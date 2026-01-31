@@ -4,6 +4,9 @@
     --header-background-color: rgb(0, 108, 154);
     --white-text-color: rgb(255, 255, 255);
     --header-height: 80px;
+
+    --forma-background-color: rgb(129, 133, 255);
+    --forma-input-background-color: rgb(39, 76, 99);
 }
 
 * {
@@ -14,7 +17,9 @@
 }
 
 body {
-    
+    display: flex;
+    flex-direction: column;
+    /* gap: 100%; */
 }
 
 .header { 
@@ -39,10 +44,10 @@ body {
     list-style: none;
     margin-top: 322px;
     visibility: hidden;
-    z-index: -1;
     transform: translateY(-303px);
     transition: all 0.3s ease-out;
 
+     z-index: -1;/* */
 }
 
 .menu {
@@ -57,7 +62,6 @@ body {
     border: 1px solid rgb(56, 120, 163);
     background-color: var(--button-background-color);
     margin-bottom: 10px;
-    z-index: 100;
 }
 
 .conteiner-button li { 
@@ -88,5 +92,57 @@ body {
 .nav:hover .conteiner-button {
     visibility: visible;
     transform: translateY(0);
+}
+
+.yarlik {
+    position: absolute;
+    left: 485px;
+    margin-top: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 30%;
+    background-color:  var(--forma-background-color);
+    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0);
+}
+
+.yarlik_2 {
+    position: absolute;
+    left: 485px;
+    margin-top: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 30%;
+    background-color:  var(--forma-background-color);
+    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.526);
+}
+
+.yarlik-krepeg {
+    box-shadow: 4px 1px 10px rgba(0, 0, 0, 0);
+}
+
+
+.yarlik_2:hover {
+    cursor: pointer;
+    transform: translateX(15px);
+}
+
+body input[type="checkbox"] {
+    display: none;
+}
+
+.forma {
+    width: 500px;
+    height: 82.3vh;
+    background-color: var(--forma-background-color);
+    box-shadow: 4px 1px 10px rgba(0, 0, 0, 0.545);
+}
+
+.vidvig-okno {
+    transform: translateX(-498px);
+    transition: all 0.6s ease;
+}
+
+#yarlik-okna:checked ~ .vidvig-okno {
+    transform: translateX(0);
 }
 
